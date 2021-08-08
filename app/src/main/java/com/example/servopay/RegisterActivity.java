@@ -54,7 +54,6 @@ public class RegisterActivity extends AppCompatActivity {
 
         mRootRef= FirebaseDatabase.getInstance().getReference();
         mAuth=FirebaseAuth.getInstance();
-        pd=new ProgressDialog(this);
 
         loginUser.setOnClickListener(new View.OnClickListener() {
             @Override
