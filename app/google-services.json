@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "341837028178",
+    "firebase_url": "https://servopayapplication-25cc2-default-rtdb.europe-west1.firebasedatabase.app",
+    "project_id": "servopayapplication-25cc2",
+    "storage_bucket": "servopayapplication-25cc2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:341837028178:android:b695cb46bea3da2ef1b88b",
+        "android_client_info": {
+          "package_name": "com.example.servopay"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "341837028178-5q8uo0b4mru4gsq53171aegrvad430hh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB40aOg-g468jkzpt8rv7oB2wXwPziWsM0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "341837028178-5q8uo0b4mru4gsq53171aegrvad430hh.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
