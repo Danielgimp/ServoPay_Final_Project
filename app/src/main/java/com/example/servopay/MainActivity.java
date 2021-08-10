@@ -82,6 +82,8 @@ public class MainActivity extends AppCompatActivity {
             startActivity(new Intent(MainActivity.this , HomeActivity.class).addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_CLEAR_TOP));
             finish();
         }
+
+
     }
 
 
