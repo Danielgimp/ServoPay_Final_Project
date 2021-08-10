@@ -25,7 +25,7 @@
             android:id="@+id/bottom_navigation"
             app:itemIconTint="@color/selector"
             app:labelVisibilityMode="unlabeled"
-            android:background="?android:attr/windowBackground"
+            android:background="@color/colorWhite"
             app:menu="@menu/bottom_menu"/>
     </com.google.android.material.appbar.AppBarLayout>
 
