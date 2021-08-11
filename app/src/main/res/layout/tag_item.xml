@@ -14,14 +14,15 @@
         android:maxLines="1"
         android:textStyle="bold"
         android:textColor="@color/design_default_color_primary_dark"
-        android:textSize="18sp"/>
+        android:textSize="12sp"/>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/no_of_posts"
         android:maxLines="1"
-        android:text="123 Posts"/>
+        android:text="123 Posts"
+        android:textColor="@color/design_default_color_primary_dark"/>
 
 
 </LinearLayout>

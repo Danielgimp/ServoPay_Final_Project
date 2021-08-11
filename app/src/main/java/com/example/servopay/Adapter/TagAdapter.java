@@ -1,5 +1,4 @@
 package com.example.servopay.Adapter;
-
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -9,10 +8,8 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.servopay.R;
 
-import org.jetbrains.annotations.NotNull;
-import org.w3c.dom.Text;
+import com.example.servopay.R;
 
 import java.util.List;
 
@@ -70,3 +67,4 @@ public class TagAdapter extends RecyclerView.Adapter<TagAdapter.ViewHolder>{
     }
 
 }
+
