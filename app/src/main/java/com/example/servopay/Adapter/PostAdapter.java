@@ -1,6 +1,7 @@
 package com.example.servopay.Adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -10,6 +11,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.servopay.CommentActivity;
 import com.example.servopay.Model.Post;
 import com.example.servopay.Model.User;
 import com.example.servopay.R;
@@ -76,6 +78,7 @@ public class PostAdapter extends RecyclerView.Adapter<PostAdapter.Viewholder>{
 
         isLiked(post.getPostid(),holder.like);
         noOfLikes(post.getPostid(), holder.noOfLikes);
+        getComments(post.getPostid(), holder.noOfComments);
 
         holder.like.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -86,6 +89,26 @@ public class PostAdapter extends RecyclerView.Adapter<PostAdapter.Viewholder>{
                 else{
                     FirebaseDatabase.getInstance().getReference().child("Likes").child(post.getPostid()).child(firebaseUser.getUid()).removeValue();
                 }
+            }
+        });
+
+        holder.comment.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent (mContext, CommentActivity.class);
+                intent.putExtra("postID",post.getPostid());
+                intent.putExtra("authorID",post.getPublisher());
+                mContext.startActivity(intent);
+            }
+        });
+
+        holder.noOfComments.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent (mContext, CommentActivity.class);
+                intent.putExtra("postID",post.getPostid());
+                intent.putExtra("authorID",post.getPublisher());
+                mContext.startActivity(intent);
             }
         });
 
@@ -162,6 +185,23 @@ public class PostAdapter extends RecyclerView.Adapter<PostAdapter.Viewholder>{
 
             }
         });
+
+    }
+
+    private void getComments (String postId,TextView text){
+        FirebaseDatabase.getInstance().getReference().child("Comments").child(postId).addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull @NotNull DataSnapshot dataSnapshot) {
+                text.setText("View All " + dataSnapshot.getChildrenCount() + " Comments");
+            }
+
+            @Override
+            public void onCancelled(@NonNull @NotNull DatabaseError error) {
+
+            }
+        });
+
+
 
     }
 
