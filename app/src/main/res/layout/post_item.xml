@@ -10,6 +10,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
         android:src="@drawable/ic_more"
+        android:id="@+id/more"
         android:layout_margin="15dp"/>
 
     <LinearLayout
@@ -23,22 +24,20 @@
             android:orientation="horizontal">
 
             <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/profile_image"
                 android:layout_width="40dp"
                 android:layout_height="40dp"
-                android:id="@+id/profile_image"
-                android:src="@mipmap/ic_launcher"
                 android:layout_margin="5dp"/>
 
             <TextView
+                android:id="@+id/username"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/username"
-                android:text="Username"
                 android:layout_gravity="center_vertical"
-                android:textSize="16sp"
-                android:textStyle="bold"
+                android:layout_margin="5dp"
                 android:textColor="@color/design_default_color_primary"
-                android:layout_margin="5dp"/>
+                android:textSize="16sp"
+                android:textStyle="bold" />
 
         </LinearLayout>
 
@@ -86,38 +85,36 @@
         </RelativeLayout>
 
         <TextView
+            android:id="@+id/likes_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
-            android:id="@+id/likes_text"
-            android:text="Likes Count"
-            android:textStyle="bold"
-            android:textColor="@color/colorAccent"/>
+            android:text="Likes Test"
+            android:textColor="@color/colorAccent"
+            android:textStyle="bold" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
             android:textStyle="bold"
-            android:text="The Author"
+            android:text="Author"
             android:id="@+id/author"/>
 
         <com.hendraanggrian.appcompat.widget.SocialTextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
-            android:layout_marginTop="5dp"
-            android:layout_marginBottom="5dp"
-            android:text="Text Description!"
+            android:text="Description Test"
+            android:textColor="@color/colorAccent"
             android:id="@+id/description"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
-            android:layout_marginTop="5dp"
-            android:layout_marginBottom="5dp"
-            android:id="@+id/nuo_of_comments"
+            android:id="@+id/num_of_comments"
+            android:text="5 comments"
             android:textColor="@color/colorAccent"/>
     </LinearLayout>
 
