@@ -59,7 +59,18 @@ public class HomeActivity extends AppCompatActivity {
                 return true;
             }
         });
-        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new HomeFragment()).commit();
+
+        Bundle intent = getIntent().getExtras();
+        if(intent != null){
+            String profileId = intent.getString("publisherId");
+            getSharedPreferences("PROFILE",MODE_PRIVATE).edit().putString("profileId",profileId).apply();
+            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,new ProfileFragment()).commit();
+        }
+
+        else{
+            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new HomeFragment()).commit();
+        }
+
 
     }
 }

@@ -2,11 +2,12 @@ package com.example.servopay.Model;
 
 public class Comment {
 
-    private String comment,publisher;
+    private String comment,publisher,id;
 
-    public Comment(String comment, String publisher) {
+    public Comment(String comment, String publisher , String id) {
         this.comment = comment;
         this.publisher = publisher;
+        this.id = id;
     }
 
     public Comment() {
@@ -24,7 +25,17 @@ public class Comment {
         return publisher;
     }
 
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
     public void setPublisher(String publisher) {
         this.publisher = publisher;
     }
+
+
 }
