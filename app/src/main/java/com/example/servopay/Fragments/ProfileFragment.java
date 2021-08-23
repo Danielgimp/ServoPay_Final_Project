@@ -97,6 +97,7 @@ public class ProfileFragment extends Fragment {
         recyclerViewSaves.setLayoutManager(new GridLayoutManager(getContext() ,3));
         mySavedPosts = new ArrayList<>();
         postAdapterSaves = new PhotoAdapter(getContext(),mySavedPosts);
+        recyclerViewSaves.setAdapter(postAdapterSaves);
 
         profileID = fUser.getUid();
 
