@@ -45,6 +45,8 @@ dependencies {
     implementation "com.hendraanggrian.appcompat:socialview:0.2"
     implementation "com.hendraanggrian.appcompat:socialview-commons:0.2"
 
+    implementation 'com.rengwuxian.materialedittext:library:2.1.4'
+
     api 'com.theartofdev.edmodo:android-image-cropper:2.8.+'
 
     implementation 'com.squareup.picasso:picasso:2.71828'

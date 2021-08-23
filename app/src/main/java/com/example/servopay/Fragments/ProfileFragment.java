@@ -1,6 +1,7 @@
 package com.example.servopay.Fragments;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -19,6 +20,7 @@ import android.widget.TextView;
 
 import com.example.servopay.Adapter.PhotoAdapter;
 import com.example.servopay.Adapter.PostAdapter;
+import com.example.servopay.EditProfileActivity;
 import com.example.servopay.Model.Post;
 import com.example.servopay.Model.User;
 import com.example.servopay.R;
@@ -123,7 +125,7 @@ public class ProfileFragment extends Fragment {
                 String btnText = editProfile.getText().toString();
 
                 if (btnText.equals("Edit Profile")){
-                    //GOTO edit activity
+                    startActivity(new Intent(getContext(), EditProfileActivity.class));
 
                 }
                 else {
