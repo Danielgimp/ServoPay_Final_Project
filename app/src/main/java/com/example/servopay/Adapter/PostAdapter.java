@@ -79,6 +79,7 @@ public class PostAdapter extends RecyclerView.Adapter<PostAdapter.Viewholder>{
         isLiked(post.getPostid(),holder.like);
         noOfLikes(post.getPostid(), holder.noOfLikes);
         getComments(post.getPostid(), holder.noOfComments);
+        isSaved(post.getPostid(),holder.save);
 
         holder.like.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -112,6 +113,41 @@ public class PostAdapter extends RecyclerView.Adapter<PostAdapter.Viewholder>{
             }
         });
 
+        holder.save.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(holder.save.getTag().equals("save")) {
+                    FirebaseDatabase.getInstance().getReference().child("Saves").child(firebaseUser.getUid()).child(post.getPostid()).setValue(true);
+                }
+                else{
+                    FirebaseDatabase.getInstance().getReference().child("Saves").child(firebaseUser.getUid()).child(post.getPostid()).removeValue();
+
+                }
+            }
+        });
+
+
+    }
+
+    private void isSaved(String postid, ImageView save) {
+        FirebaseDatabase.getInstance().getReference().child("Saves").child(FirebaseAuth.getInstance().getCurrentUser().getUid()).addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull @NotNull DataSnapshot dataSnapshot) {
+                if(dataSnapshot.child(postid).exists()){
+                    save.setImageResource(R.drawable.ic_save_black);
+                    save.setTag("saved");
+                }
+                else {
+                    save.setImageResource(R.drawable.ic_save);
+                    save.setTag("save");
+                }
+            }
+
+            @Override
+            public void onCancelled(@NonNull @NotNull DatabaseError error) {
+
+            }
+        });
 
     }
 

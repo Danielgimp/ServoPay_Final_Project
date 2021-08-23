@@ -17,11 +17,15 @@ import org.jetbrains.annotations.NotNull;
 
 import java.util.List;
 
-public class photo_adapter extends RecyclerView.Adapter<photo_adapter.ViewHolder>{
+public class PhotoAdapter extends RecyclerView.Adapter<PhotoAdapter.ViewHolder>{
 
     private Context mContext;
-    private List<Post> mPostsl;
+    private List<Post> mPosts;
 
+    public PhotoAdapter(Context mContext, List<Post> mPosts) {
+        this.mContext = mContext;
+        this.mPosts = mPosts;
+    }
 
     @NonNull
     @NotNull
@@ -30,20 +34,19 @@ public class photo_adapter extends RecyclerView.Adapter<photo_adapter.ViewHolder
 
         View view = LayoutInflater.from(mContext).inflate(R.layout.photo_item,parent,false);
 
-        return new photo_adapter.ViewHolder(view);
+        return new PhotoAdapter.ViewHolder(view);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull @NotNull photo_adapter.ViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull @NotNull PhotoAdapter.ViewHolder holder, int position) {
 
-        Post post = mPostsl.get(position);
+        Post post = mPosts.get(position);
         Picasso.get().load(post.getImageurl()).placeholder(R.mipmap.ic_launcher).into(holder.postImage);
-
     }
 
     @Override
     public int getItemCount() {
-        return 0;
+        return mPosts.size();
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder{

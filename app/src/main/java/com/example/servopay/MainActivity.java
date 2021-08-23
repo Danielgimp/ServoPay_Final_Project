@@ -77,11 +77,13 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onStart() {
         super.onStart();
+/**
+ if(FirebaseAuth.getInstance().getCurrentUser() !=null){
+ startActivity(new Intent(MainActivity.this , HomeActivity.class).addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_CLEAR_TOP));
+ finish();
+ }
+ */
 
-        if(FirebaseAuth.getInstance().getCurrentUser() !=null){
-            startActivity(new Intent(MainActivity.this , HomeActivity.class).addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_CLEAR_TOP));
-            finish();
-        }
 
 
     }
