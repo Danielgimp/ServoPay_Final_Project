@@ -71,7 +71,9 @@ public class ProfileFragment extends Fragment {
         if(data.equals("none")){
             profileID=fUser.getUid();
         }
-        else {profileID = data;}
+        else {
+            profileID = data;
+            getContext().getSharedPreferences("PROFILE", Context.MODE_PRIVATE).edit().clear().apply();}
 
         imageProfile = view.findViewById(R.id.image_profile);
         options = view.findViewById(R.id.options);
