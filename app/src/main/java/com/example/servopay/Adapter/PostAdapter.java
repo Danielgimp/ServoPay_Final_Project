@@ -29,6 +29,7 @@ import com.squareup.picasso.Picasso;
 
 import org.jetbrains.annotations.NotNull;
 
+import java.util.HashMap;
 import java.util.List;
 
 public class PostAdapter extends RecyclerView.Adapter<PostAdapter.Viewholder>{
@@ -89,6 +90,7 @@ public class PostAdapter extends RecyclerView.Adapter<PostAdapter.Viewholder>{
             public void onClick(View v) {
                 if(holder.like.getTag().equals("like")){
                     FirebaseDatabase.getInstance().getReference().child("Likes").child(post.getPostid()).child(firebaseUser.getUid()).setValue(true);
+                    addNotification(post.getPostid(),post.getPublisher());
                 }
                 else{
                     FirebaseDatabase.getInstance().getReference().child("Likes").child(post.getPostid()).child(firebaseUser.getUid()).removeValue();
@@ -172,6 +174,17 @@ public class PostAdapter extends RecyclerView.Adapter<PostAdapter.Viewholder>{
             }
         });
 
+
+    }
+
+    private void addNotification(String postId, String publisherId) {
+        HashMap <String,Object> map = new HashMap<>();
+        map.put("userid",publisherId);
+        map.put("text","Liked your post.");
+        map.put("postid", postId);
+        map.put("isPost",true);
+
+        FirebaseDatabase.getInstance().getReference().child("Notifications").child(firebaseUser.getUid()).push().setValue(map);
 
     }
 
