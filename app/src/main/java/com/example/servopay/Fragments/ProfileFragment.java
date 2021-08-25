@@ -2,6 +2,7 @@ package com.example.servopay.Fragments;
 
 import android.content.Context;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -54,9 +55,9 @@ public class ProfileFragment extends Fragment {
 
     private CircleImageView imageProfile;
     private ImageView options,myPictures,savedPictures;
-    private TextView posts,followers,following,fullname,bio,username;
+    private TextView posts,followers,following,fullname,bio,username,city,email;
     private FirebaseUser fUser;
-    private Button editProfile;
+    private Button editProfile, callbutton;
     String profileID;
 
 
@@ -88,6 +89,9 @@ public class ProfileFragment extends Fragment {
         myPictures = view.findViewById(R.id.my_pictures);
         savedPictures = view.findViewById(R.id.saved_pictures);
         editProfile = view.findViewById(R.id.edit_profile);
+        callbutton=view.findViewById(R.id.callB);
+        city=view.findViewById(R.id.location);
+        email=view.findViewById(R.id.emailP);
 
         recyclerView = view.findViewById(R.id.recler_view_Pictures);
         recyclerView.setHasFixedSize(true);
@@ -324,6 +328,19 @@ public class ProfileFragment extends Fragment {
                 username.setText(user.getUsername());
                 fullname.setText(user.getName());
                 bio.setText(user.getBio());
+                email.setText(user.getEmail());
+                city.setText(user.getCity());
+                String s=user.getPhone();
+                callbutton.setOnClickListener(new View.OnClickListener()
+                {
+                    @Override
+                    public void onClick(View v)
+                    {
+                        Intent callIntent = new Intent(Intent.ACTION_DIAL);
+                        callIntent.setData(Uri.parse("tel:"+s));
+                        startActivity(callIntent);
+                    }
+                });
 
 
             }

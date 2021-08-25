@@ -171,18 +171,45 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:maxLines="1"
+                    android:gravity="left"
+                    android:textDirection="ltr"
                     android:id="@+id/fullname"
                     android:textStyle="bold"
                     android:textSize="18sp"
                     android:textColor="@color/colorPrimaryDark"/>
 
                 <TextView
+                    android:id="@+id/location"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/emailP"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/bio"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="5dp"
-                    android:id="@+id/bio"
                     android:maxLines="5"
-                    android:textColor="@color/colorAccent"/>
+                    android:textColor="@color/colorAccent" />
+
+                <Button
+                    android:id="@+id/callB"
+                    android:layout_width="78dp"
+                    android:layout_height="50dp"
+                    android:background="#FFFFFF"
+                    android:backgroundTint="#DDF6F4F4"
+                    android:drawableStart="@drawable/phone"
+                    android:text="call" />
 
             </LinearLayout>
 

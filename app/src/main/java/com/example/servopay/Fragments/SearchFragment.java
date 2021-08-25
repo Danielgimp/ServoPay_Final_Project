@@ -95,15 +95,7 @@ public class SearchFragment extends Fragment {
         FirebaseDatabase.getInstance().getReference().child("HashTags").addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                mHashTags.clear();
-                mHashTagsCount.clear();
 
-                for (DataSnapshot snapshot : dataSnapshot.getChildren()){
-                    mHashTags.add(snapshot.getKey());
-                    mHashTagsCount.add(snapshot.getChildrenCount() + "");
-                }
-
-                tagAdapter.notifyDataSetChanged();
             }
 
             @Override
@@ -120,15 +112,7 @@ public class SearchFragment extends Fragment {
         reference.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                if (TextUtils.isEmpty(search_bar.getText().toString())){
-                    mUsers.clear();
-                    for (DataSnapshot snapshot : dataSnapshot.getChildren()){
-                        User user = snapshot.getValue(User.class);
-                        mUsers.add(user);
-                    }
 
-                    userAdapter.notifyDataSetChanged();
-                }
             }
 
             @Override
@@ -139,26 +123,31 @@ public class SearchFragment extends Fragment {
 
     }
 
-    private void searchUser(String s){
-        Query query = FirebaseDatabase.getInstance().getReference().child("Users").orderByChild("username").startAt(s).endAt(s+"\uf8ff");
+    private void searchUser(String s)
+    {
 
-        query.addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull @NotNull DataSnapshot snapshot) {
-                mUsers.clear();
-                for (DataSnapshot snap : snapshot.getChildren() ){
-                    User user = snap.getValue(User.class);
-                    mUsers.add(user);
+            Query query = FirebaseDatabase.getInstance().getReference().child("Users").orderByChild("username").startAt(s).endAt(s + "\uf8ff");
+
+            query.addValueEventListener(new ValueEventListener() {
+                @Override
+                public void onDataChange(@NonNull @NotNull DataSnapshot snapshot)
+                {
+                        mUsers.clear();
+                        for (DataSnapshot snap : snapshot.getChildren()) {
+                            User user = snap.getValue(User.class);
+                            mUsers.add(user);
+                        }
+                        userAdapter.notifyDataSetChanged();
+
                 }
-                userAdapter.notifyDataSetChanged();
-            }
 
-            @Override
-            public void onCancelled(@NonNull @NotNull DatabaseError error) {
+                @Override
+                public void onCancelled(@NonNull @NotNull DatabaseError error)
+                {
 
+                }
+            });
 
-            }
-        });
     }
 
     private void filter (String text) {
