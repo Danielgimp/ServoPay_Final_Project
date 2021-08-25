@@ -2,18 +2,21 @@ package com.example.servopay.Model;
 
 public class User {
 
-    private String name,email,username,bio,id,imageurl;
+    private String name,email,username,bio,id,imageurl,phone,category ,city;
 
     public User() {
     }
 
-    public User(String name, String email, String username, String bio, String id, String imageurl) {
+    public User(String name, String email, String username, String bio, String id, String imageurl, String phone, String Category , String city) {
         this.name = name;
         this.email = email;
         this.username = username;
         this.bio = bio;
         this.id = id;
         this.imageurl = imageurl;
+        this.phone=phone;
+        this.category=category;
+        this.city=city;
     }
 
     public String getName() {
@@ -54,6 +57,29 @@ public class User {
 
     public void setId(String id) {
         this.id = id;
+    }
+
+    public String getCity() {
+        return city;
+    }
+
+    public void setCity(String city) {
+        this.city = city;
+    }
+
+    public String getPhone() {
+        return phone;
+    }
+
+    public void setPhone(String phone) {
+        this.phone = phone;
+    }
+    public String getCategory() {
+        return category;
+    }
+
+    public void setCategory(String category) {
+        this.category = category;
     }
 
     public String getImageurl() {

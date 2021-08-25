@@ -9,8 +9,10 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -33,12 +35,13 @@ public class RegisterActivity extends AppCompatActivity {
     private EditText password;
     private Button register;
     private TextView loginUser;
+    private EditText phone;
+
 
     private DatabaseReference mRootRef;
     private FirebaseAuth mAuth;
 
     ProgressDialog pd;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -50,6 +53,7 @@ public class RegisterActivity extends AppCompatActivity {
         password = findViewById(R.id.password);
         register = findViewById(R.id.register);
         loginUser = findViewById(R.id.login_user);
+        phone= findViewById(R.id.phone);
 
         mRootRef = FirebaseDatabase.getInstance().getReference();
         mAuth = FirebaseAuth.getInstance();
@@ -62,6 +66,24 @@ public class RegisterActivity extends AppCompatActivity {
             }
         });
 
+        Spinner dropdown = findViewById(R.id.spinner1);
+        //create a list of items for the spinner.
+        String[] items = new String[]{"לק ג'ל","מאלף כלבים","לימוד גיטרה","אימון אישי","מיתוג מוצרים", "בייביסיטר","עיצוב בלונים","עוגות בהזמנה אישית","שיעורים פרטיים","קוסמטיקה" };
+        //create an adapter to describe how the items are displayed, adapters are used in several places in android.
+//There are multiple variations of this, but this is the basic variant.
+        ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, items);
+//set the spinners adapter to the previously created one.
+        dropdown.setAdapter(adapter);
+
+        Spinner city = findViewById(R.id.spinner2);
+        //create a list of items for the spinner.
+        String[] cities = new String[]{"Tel Aviv","Netanya", "Or Yehuda" , "Yehud" , "Hadera" , "Afula" ,"Ashdod" , "BeerSheba" ,"Eilat" , "Holon"};
+        //create an adapter to describe how the items are displayed, adapters are used in several places in android.
+//There are multiple variations of this, but this is the basic variant.
+        ArrayAdapter<String> adaptercity = new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, cities);
+//set the spinners adapter to the previously created one.
+        city.setAdapter(adaptercity);
+
         register.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -69,6 +91,9 @@ public class RegisterActivity extends AppCompatActivity {
                 String txtName = name.getText().toString();
                 String txtEmail = email.getText().toString();
                 String txtPassword = password.getText().toString();
+                String txtphone = phone.getText().toString();
+                String txtcategory= dropdown.getSelectedItem().toString();
+                String txtcity = city.getSelectedItem().toString();
 
                 if (TextUtils.isEmpty(txtUsername) || TextUtils.isEmpty(txtName)
                         || TextUtils.isEmpty(txtEmail) || TextUtils.isEmpty(txtPassword)){
@@ -76,13 +101,13 @@ public class RegisterActivity extends AppCompatActivity {
                 } else if (txtPassword.length() < 6){
                     Toast.makeText(RegisterActivity.this, "Password too short!", Toast.LENGTH_SHORT).show();
                 } else {
-                    registerUser(txtUsername , txtName , txtEmail , txtPassword);
+                    registerUser(txtUsername , txtName , txtEmail , txtPassword , txtphone ,txtcategory,txtcity);
                 }
             }
         });
     }
 
-    private void registerUser(final String username, final String name, final String email, String password) {
+    private void registerUser(final String username, final String name, final String email, String password , String phone, String category ,String city) {
 
         pd.setMessage("Please Wail!");
         pd.show();
@@ -98,6 +123,9 @@ public class RegisterActivity extends AppCompatActivity {
                 map.put("id" , mAuth.getCurrentUser().getUid());
                 map.put("bio" , "");
                 map.put("imageurl" , "default");
+                map.put("phone" ,phone);
+                map.put("category", category);
+                map.put("city", city);
 
                 mRootRef.child("Users").child(mAuth.getCurrentUser().getUid()).setValue(map).addOnCompleteListener(new OnCompleteListener<Void>() {
                     @Override
@@ -114,7 +142,12 @@ public class RegisterActivity extends AppCompatActivity {
                     }
                 });
 
+                mRootRef.child("category").child(category).push().setValue(mAuth.getCurrentUser().getUid());
+                mRootRef.child("cities").child(city).push().setValue(mAuth.getCurrentUser().getUid());
+
+
             }
+
         }).addOnFailureListener(new OnFailureListener() {
             @Override
             public void onFailure(@NonNull Exception e) {
@@ -122,6 +155,7 @@ public class RegisterActivity extends AppCompatActivity {
                 Toast.makeText(RegisterActivity.this, e.getMessage(), Toast.LENGTH_SHORT).show();
             }
         });
+
 
     }
 }
