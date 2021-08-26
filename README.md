@@ -8,7 +8,12 @@
 
 ## Problem -
 
-## Our solution
+private person have an issue giving their services to small audiences in close by 
+proximity. 
+
+## Our solution -
+Every business has it's own promotional profile and everyone has an option to log into 
+the service and view the business profiles. 
 
 #
 <img src="https://scontent.fsdv2-1.fna.fbcdn.net/v/t1.6435-9/240435555_4320892384645101_3142394328444400360_n.jpg?_nc_cat=106&_nc_rgb565=1&ccb=1-5&_nc_sid=0debeb&_nc_ohc=e44gqPyh_bAAX-SSq2-&tn=0DcrdXiNqAuphOhT&_nc_ht=scontent.fsdv2-1.fna&oh=028fa00d76865883a12618d24c78a0db&oe=614E4A1C" width="300" height="550">
@@ -34,9 +39,7 @@ change
 private person have an issue giving their services to small audiences in close by 
 proximity, and our solution comes to solve that issue, via mobile infrastructure.
 Every business has it's own promotional profile and everyone has an option to log into 
-the service and view the business profiles. This would be done with a search by 
-category, price, location, etc, which in return would let consumers to find the desirable 
-product they seek for with ease.
+the service and view the business profiles. 
 Another goal would be the app design with two goal in mind:
 Catch the user's attention.
 Make the app easy to use and inviting.
