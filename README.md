@@ -16,7 +16,7 @@ Every business has it's own promotional profile and everyone has an option to lo
 the service and view the business profiles. 
 
 
-## 1. Create profiles
+## 1. Create buisness profiles
 
 #
 <img src="https://scontent.fsdv2-1.fna.fbcdn.net/v/t1.6435-9/240435555_4320892384645101_3142394328444400360_n.jpg?_nc_cat=106&_nc_rgb565=1&ccb=1-5&_nc_sid=0debeb&_nc_ohc=e44gqPyh_bAAX-SSq2-&tn=0DcrdXiNqAuphOhT&_nc_ht=scontent.fsdv2-1.fna&oh=028fa00d76865883a12618d24c78a0db&oe=614E4A1C" width="300" height="550">
@@ -36,6 +36,10 @@ the service and view the business profiles.
 ## 5. Contact with the service giver
 
 ## 6. Likes and comments
+
+## 7. Watch the buisness details 
+
+
 
 ## 
 Are you in need of local recognition for your service? or in need to find a service quickly 
