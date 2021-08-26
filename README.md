@@ -39,6 +39,9 @@ the service and view the business profiles.
 
 ## 7. Watch the buisness details 
 
+## 8. Solid and easy user interface 
+
+
 
 
 ## 
