@@ -5,7 +5,8 @@
 
 
 
-## Are you in need of local recognition for your service? or in need to find a service quickly 
+## 
+Are you in need of local recognition for your service? or in need to find a service quickly 
 for today? We are here to help. Our product offers easy and intuitive connection with 
 the costumer, easy appointment management, includes photos of the desired service 
 and most important helps you to get a Close-by client for the desired service that you as 
