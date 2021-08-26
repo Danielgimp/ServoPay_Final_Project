@@ -1,11 +1,10 @@
 
-# Servo pay
-## Ariel University - final project
-### Rinat Ozkesen and Daniel Gimplman
-
-
+# 
 ![alt text](https://scontent.fsdv2-1.fna.fbcdn.net/v/t1.6435-9/240670587_4320883971312609_9100155130939486439_n.jpg?_nc_cat=100&ccb=1-5&_nc_sid=730e14&_nc_ohc=mx5oV3Osl4cAX96SJvJ&_nc_ht=scontent.fsdv2-1.fna&oh=8342596eed72bf8f7ae7418a24a539a9&oe=614CBC1F)
 
+
+## Ariel University - final project
+### Rinat Ozkesen and Daniel Gimplman
 
 ## 
 Are you in need of local recognition for your service? or in need to find a service quickly 
