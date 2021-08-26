@@ -35,6 +35,8 @@ the service and view the business profiles.
 
 ## 5. Contact with the service giver
 
+## 6. Likes and comments
+
 ## 
 Are you in need of local recognition for your service? or in need to find a service quickly 
 for today? We are here to help. Our product offers easy and intuitive connection with 
