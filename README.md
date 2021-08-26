@@ -52,10 +52,9 @@ contact information.
 a small service giving.
 Give a client a comfortable way to find the service he is looking for.
 Two useful exercises for developing a vision statement are [Agile Project Management]:
-• Key Features that would be printed on the box:
+Key Features that would be printed on the box:
 1. Appointment management with ease
 2. Featuring photos of the desired service 
-
 3.Close-by Service giving location.
 4. Eye catching user interface and user experience.
 5. Find services with ease in realtime.
