@@ -55,6 +55,7 @@ Two useful exercises for developing a vision statement are [Agile Project Manage
 • Key Features that would be printed on the box:
 1. Appointment management with ease
 2. Featuring photos of the desired service 
+
 3.Close-by Service giving location.
 4. Eye catching user interface and user experience.
 5. Find services with ease in realtime.
