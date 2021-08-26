@@ -41,8 +41,9 @@ the service and view the business profiles.
 
 ## 8. Solid and easy user interface 
 
+## 9. Register as client
 
-
+## 10. Register as service giver
 
 ## 
 Are you in need of local recognition for your service? or in need to find a service quickly 
