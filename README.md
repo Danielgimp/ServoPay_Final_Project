@@ -31,6 +31,10 @@ the service and view the business profiles.
 
 ## 3. Add profiles and watch their post.
 
+## 4. Save posts as favorite
+
+## 5. Contact with the service giver
+
 ## 
 Are you in need of local recognition for your service? or in need to find a service quickly 
 for today? We are here to help. Our product offers easy and intuitive connection with 
