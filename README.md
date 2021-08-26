@@ -19,13 +19,7 @@ the service and view the business profiles.
 ## 1. Create buisness profiles
 
 #
-<img src="https://scontent.fsdv2-1.fna.fbcdn.net/v/t1.6435-9/240435555_4320892384645101_3142394328444400360_n.jpg?_nc_cat=106&_nc_rgb565=1&ccb=1-5&_nc_sid=0debeb&_nc_ohc=e44gqPyh_bAAX-SSq2-&tn=0DcrdXiNqAuphOhT&_nc_ht=scontent.fsdv2-1.fna&oh=028fa00d76865883a12618d24c78a0db&oe=614E4A1C" width="300" height="550">
-
-#
-<img src="https://scontent.fsdv2-1.fna.fbcdn.net/v/t1.6435-9/240741854_4320892164645123_7388929015200776892_n.jpg?_nc_cat=101&_nc_rgb565=1&ccb=1-5&_nc_sid=0debeb&_nc_ohc=BFC0Ig6bXLgAX9KuTSz&_nc_ht=scontent.fsdv2-1.fna&oh=9ef60da1766cc9a500cf4f1eadf21d8e&oe=614BDD46" width="300" height="550">
-
-#
-<img src="https://scontent.fsdv2-1.fna.fbcdn.net/v/t1.6435-9/237003736_4320892281311778_2599102821034935926_n.jpg?_nc_cat=110&_nc_rgb565=1&ccb=1-5&_nc_sid=0debeb&_nc_ohc=ioIUhaJpRMwAX8PCJiS&_nc_ht=scontent.fsdv2-1.fna&oh=6496173a911765b3db1b852d2d911682&oe=614C17E6" width="300" height="550">
+<img src="https://github.com/Danielgimp/ServoPay_Final_Project/blob/master/Gifs/Register/1.gif" width="300" height="550">
 
 ## 2. Upload pictures that shows what the service help with.
 
