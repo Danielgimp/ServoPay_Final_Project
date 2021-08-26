@@ -21,23 +21,21 @@ the service and view the business profiles.
 #
 <img src="https://github.com/Danielgimp/ServoPay_Final_Project/blob/master/Gifs/Register/1.gif" width="300" height="550">
 
-## 2. Upload pictures that shows what the service help with.
+## 2. Business profile + upload Photo
 
-## 3. Add profiles and watch their post.
+<img src="https://github.com/Danielgimp/ServoPay_Final_Project/blob/master/Gifs/Profile%2BUpload%20photo%20%2B%20Saved%20Posts/1.gif" width="300" height="550">
 
-## 4. Save posts as favorite
+## 3. Saved posts
 
-## 5. Contact with the service giver
+<img src="https://github.com/Danielgimp/ServoPay_Final_Project/blob/master/Gifs/Profile%2BUpload%20photo%20%2B%20Saved%20Posts/2.gif" width="300" height="550">
+
+## 4. Contact with the service giver
+
+<img src="https://github.com/Danielgimp/ServoPay_Final_Project/blob/master/Gifs/Profile%2BUpload%20photo%20%2B%20Saved%20Posts/2.gif" width="300" height="550">
 
 ## 6. Likes and comments
 
-## 7. Watch the buisness details 
-
-## 8. Solid and easy user interface 
-
-## 9. Register as client
-
-## 10. Register as service giver
+<img src="https://im4.ezgif.com/tmp/ezgif-4-9e206bb750a3.gif" width="300" height="550">
 
 ## 
 Are you in need of local recognition for your service? or in need to find a service quickly 
